@@ -1,0 +1,136 @@
+@use "mixins";
+
+.chatlist {
+  position: absolute;
+  // height: 95vh;
+  z-index: 2;
+  width: 100%;
+  @media screen and (min-width: 786px) {
+    width: 25%;
+    position: relative;
+    height: 100%;
+  }
+}
+
+.chatList-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-top: none;
+  background-color: #fcb983;
+  padding-top: 0px;
+  width: 100%;
+  height: 95vh;
+  @media screen and (min-width: 786px) {
+    width: 100%;
+    height: 100vh;
+  }
+  // &__header {
+  // }
+  h2 {
+    width: 90%;
+    margin: 10px;
+    @include mixins.font;
+    color: white;
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .chatList-links {
+    width: 90%;
+    margin-bottom: 20px;
+
+    .chatlist-links__background {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      // margin: 0;
+      // padding: 0;
+      @include mixins.font;
+      font-size: smaller;
+      // margin: 10px;
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      cursor: pointer;
+      a {
+        width: 100%;
+        border: 1px solid rgba(221, 104, 2, 0.536);
+        border-radius: 5px;
+        background-color: rgba(221, 104, 2, 0.536);
+        padding: 7px;
+        text-decoration: none;
+        list-style-type: none;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        &:hover {
+          background-color: rgba(221, 105, 2, 1);
+        }
+      }
+    }
+  }
+}
+#community {
+  margin-bottom: 7px;
+}
+// }
+.chatlist-desktop {
+  width: 20%;
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
+}
+.hide-in-desktop {
+  @media screen and (min-width: 786px) {
+    display: none;
+  }
+}
+// .active {
+//   z-index: 1;
+//   height: 20px;
+// }
+
+.chatListCirkel {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url("/assets/group_5328047.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #dd6802;
+}
+
+.active-users {
+  @include mixins.font;
+  // padding-left: 10px;
+  width: 90%;
+  overflow-y: scroll;
+  max-height: 50%;
+  background-color: #dd680242;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.log-out-btn {
+  position: absolute;
+  width: 90%;
+  border: 1px solid #a43ed1;
+  border-radius: 5px;
+  background-color: #a43ed1;
+  padding: 7px;
+  @include mixins.font;
+  color: white;
+  margin-top: 20px;
+  bottom: 20px;
+}

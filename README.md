@@ -1,27 +1,16 @@
-# React + TypeScript + Vite
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/5kffxBaP)
+# Inlämningsuppgift med socket.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ni skall som grupp implementera en chat med socket.io och react som frontend. Denna chat skall fungera så att vem som helst kan ansluta och ange sitt namn. Namnet skall sedan stå tillsammans med de meddelanden som skickas av dig. Andra personer som ansluter till chatten skall kunna se historiken och kunna skapa egna meddelanden. Alla meddelanden skall ses av alla i realtid.
 
-Currently, two official plugins are available:
+Utöver detta skall det gå att ansluta till kanaler (som på teams) och skicka meddelanden i bara den kanalen. Bara personer som är anslutna till den nya kanalen får se meddelanden som skickas där.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Krav
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Använd socket.io för att hantera händelser
+- En person skall ange sitt namn för att ansluta till chatten. (Inga dubletter av namn får förekomma)
+- Varje meddelande skickas till alla i chatten
+- Skapa rum för kanaler
+- Kunna skicka meddelanden till det rum som du är med i
+- Markera dina egna meddelanden i en annan färg
+- Kunna redigera dina meddelanden efter att de har skickats

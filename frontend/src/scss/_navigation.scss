@@ -1,0 +1,26 @@
+.navigation {
+  z-index: 2;
+  //   width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#a43ed1, #fcb983);
+  @media screen and (min-width: 786px) {
+    display: none;
+  }
+
+  .null {
+    // padding-top: 14px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .isactive {
+    z-index: 1;
+    // height: 20px;
+    // padding-top: 14px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}

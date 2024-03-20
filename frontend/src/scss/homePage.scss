@@ -1,0 +1,107 @@
+@use "mixins";
+
+.heroImage {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/hero_image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  @include mixins.font;
+}
+
+.homeTitleContainer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeTitle {
+  font-size: 5rem;
+  color: #fcb983;
+  text-shadow: 2px 2px 2px #dd6902;
+  @include mixins.font;
+}
+
+.signInContainer {
+  width: 100%;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.87);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100px 0 0 0;
+
+  @include mixins.desktop {
+    width: 70%;
+    border-radius: 100px 100px 0 0;
+  }
+}
+
+.signInContainer h1 {
+  font-size: 2rem;
+  color: #dd6902;
+  margin-block-start: 1.9em;
+  margin-block-end: 1.9em;
+
+  @include mixins.desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.signInInputcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.signInInputcontainer input {
+  width: 80%;
+  height: 40px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+
+  @include mixins.desktop {
+    width: 50%;
+  }
+}
+
+.signInInputcontainer input:focus {
+  outline: 2px solid #dd6902;
+}
+
+.signInButton {
+  width: 80%;
+  height: 45px;
+  background-color: #dd6902;
+  border: 1px solid #dd6902;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  bottom: 100px;
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  @include mixins.font;
+
+  @include mixins.desktop {
+    bottom: 10px;
+    width: 50%;
+    font-size: 1.2rem;
+  }
+}
+
+.signInButton:hover {
+  background-color: #fcb983;
+  color: #dd6902;
+}
